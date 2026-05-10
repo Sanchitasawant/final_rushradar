@@ -1,0 +1,218 @@
+/*
+  Rush Radar Admin Theme (Jazzmin)
+  UI-only: no model/API/permission changes.
+  Matches React look: dark, neon cyan/blue, glass panels, soft shadows.
+*/
+
+:root {
+  --rr-bg-0: #020617;
+  --rr-bg-1: #0b1424;
+  --rr-bg-2: #071a36;
+  --rr-card: rgba(255, 255, 255, 0.06);
+  --rr-card-2: rgba(255, 255, 255, 0.04);
+  --rr-border: rgba(255, 255, 255, 0.10);
+  --rr-border-2: rgba(0, 198, 255, 0.18);
+  --rr-text: rgba(255, 255, 255, 0.86);
+  --rr-muted: rgba(255, 255, 255, 0.55);
+  --rr-cyan: #00C6FF;
+  --rr-blue: #0072FF;
+  --rr-glow: rgba(0, 198, 255, 0.28);
+  --rr-glow-2: rgba(0, 114, 255, 0.22);
+  --rr-radius: 16px;
+}
+
+/* App background */
+body {
+  background: radial-gradient(900px 520px at 12% 8%, rgba(0, 198, 255, 0.10), transparent 55%),
+              radial-gradient(900px 520px at 92% 18%, rgba(0, 114, 255, 0.12), transparent 55%),
+              linear-gradient(160deg, var(--rr-bg-0) 0%, var(--rr-bg-1) 42%, var(--rr-bg-2) 100%) !important;
+  color: var(--rr-text) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Top navbar */
+.main-header.navbar {
+  background: rgba(2, 6, 23, 0.55) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+}
+
+.main-header .navbar-nav .nav-link,
+.main-header .navbar-nav .nav-link i {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+.main-header .navbar-nav .nav-link:hover {
+  color: #fff !important;
+}
+
+/* Brand (sidebar header) */
+.brand-link {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+.brand-link .brand-text {
+  font-weight: 800 !important;
+  letter-spacing: 0.8px;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Sidebar */
+.main-sidebar {
+  background: rgba(2, 6, 23, 0.55) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.55);
+}
+
+.nav-sidebar .nav-link {
+  border-radius: 12px;
+  margin: 6px 10px;
+  color: rgba(255, 255, 255, 0.72) !important;
+  border: 1px solid transparent;
+  transition: all 160ms ease;
+}
+
+.nav-sidebar .nav-link:hover {
+  background: rgba(0, 198, 255, 0.08) !important;
+  border-color: rgba(0, 198, 255, 0.18);
+  box-shadow: 0 10px 30px rgba(0, 198, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+.nav-sidebar .nav-link.active {
+  background: linear-gradient(135deg, rgba(0,198,255,0.16), rgba(0,114,255,0.14)) !important;
+  border-color: rgba(0, 198, 255, 0.22);
+  box-shadow: 0 14px 40px rgba(0, 198, 255, 0.12), 0 12px 45px rgba(0, 114, 255, 0.10);
+  color: #fff !important;
+}
+
+/* Content wrapper */
+.content-wrapper {
+  background: transparent !important;
+}
+
+/* Cards / panels (AdminLTE) */
+.card,
+.card.card-default {
+  background: linear-gradient(180deg, var(--rr-card), var(--rr-card-2)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: calc(var(--rr-radius) + 6px) !important;
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.card-header {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+.card-title {
+  font-weight: 800 !important;
+  letter-spacing: 0.4px;
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+/* Tables */
+.table,
+.table thead th {
+  color: rgba(255, 255, 255, 0.80) !important;
+}
+.table thead th {
+  border-bottom: 1px solid rgba(255,255,255,0.10) !important;
+}
+.table td, .table th {
+  border-top: 1px solid rgba(255,255,255,0.08) !important;
+}
+.table-hover tbody tr:hover {
+  background: rgba(0, 198, 255, 0.06) !important;
+}
+
+/* Form controls */
+.form-control,
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+  background: rgba(255, 255, 255, 0.06) !important;
+  color: rgba(255, 255, 255, 0.86) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+}
+.form-control:focus {
+  border-color: rgba(0, 198, 255, 0.55) !important;
+  box-shadow: 0 0 0 4px rgba(0, 198, 255, 0.12), 0 10px 30px rgba(0,0,0,0.35) !important;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-success,
+.btn-info {
+  border: none !important;
+  border-radius: 14px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, var(--rr-cyan), var(--rr-blue)) !important;
+  box-shadow: 0 14px 45px rgba(0, 114, 255, 0.25), 0 0 0 1px rgba(0, 198, 255, 0.18);
+}
+.btn-primary:hover,
+.btn-success:hover,
+.btn-info:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+  border-radius: 14px !important;
+  border-color: rgba(0, 198, 255, 0.35) !important;
+  color: rgba(0, 198, 255, 0.95) !important;
+}
+.btn-outline-primary:hover {
+  background: rgba(0, 198, 255, 0.12) !important;
+  color: #fff !important;
+}
+
+/* Filters / changelist toolbar */
+#changelist-filter {
+  border-radius: calc(var(--rr-radius) + 6px) !important;
+  overflow: hidden;
+}
+
+/* Login page polish */
+.login-page,
+.register-page {
+  background: transparent !important;
+}
+.login-box .card {
+  border-radius: 26px !important;
+}
+.login-box .card-header {
+  border-bottom: 0 !important;
+}
+.login-box .card-header h1,
+.login-box .card-header h2,
+.login-box .card-header h3 {
+  font-weight: 900 !important;
+}
+
+/* Hide logged-in admin username from sidebar and top navbar per requirements */
+.user-panel {
+  display: none !important;
+}
+.user-menu {
+  display: none !important;
+}
+

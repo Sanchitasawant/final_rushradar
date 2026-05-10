@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00C6FF"/>
+      <stop offset="1" stop-color="#0072FF"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feColorMatrix in="b" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0.78
+                0 0 0 0 1
+                0 0 0 0.9 0" result="c"/>
+      <feMerge>
+        <feMergeNode in="c"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="16" y="16" width="224" height="224" rx="48" fill="#071a36"/>
+  <rect x="16" y="16" width="224" height="224" rx="48" fill="url(#g)" opacity="0.14"/>
+
+  <!-- Train icon -->
+  <g filter="url(#glow)">
+    <path d="M86 64h84c12.2 0 22 9.8 22 22v66c0 12.2-9.8 22-22 22H86c-12.2 0-22-9.8-22-22V86c0-12.2 9.8-22 22-22z"
+          fill="rgba(255,255,255,0.06)" stroke="rgba(0,198,255,0.55)" stroke-width="3"/>
+    <path d="M88 92c0-7.7 6.3-14 14-14h52c7.7 0 14 6.3 14 14v18H88V92z"
+          fill="rgba(0,198,255,0.12)"/>
+    <path d="M168 78h10c7.7 0 14 6.3 14 14v18h-24V78z"
+          fill="rgba(0,114,255,0.16)"/>
+
+    <rect x="88" y="124" width="104" height="22" rx="11" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.08)"/>
+    <circle cx="108" cy="185" r="12" fill="rgba(0,198,255,0.15)" stroke="rgba(0,198,255,0.6)" stroke-width="3"/>
+    <circle cx="148" cy="185" r="12" fill="rgba(0,198,255,0.15)" stroke="rgba(0,198,255,0.6)" stroke-width="3"/>
+    <path d="M76 206h104" stroke="rgba(0,198,255,0.55)" stroke-width="3" stroke-linecap="round"/>
+    <path d="M78 216h124" stroke="rgba(255,255,255,0.14)" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- Radar ring -->
+  <circle cx="128" cy="128" r="92" fill="none" stroke="rgba(0,198,255,0.22)" stroke-width="2"/>
+  <circle cx="128" cy="128" r="70" fill="none" stroke="rgba(0,198,255,0.14)" stroke-width="2"/>
+  <path d="M128 38a90 90 0 0 1 90 90" fill="none" stroke="rgba(56,189,248,0.35)" stroke-width="6" stroke-linecap="round"/>
+</svg>
+

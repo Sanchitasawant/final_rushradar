@@ -1,0 +1,7 @@
+train,station,time
+CSMT_FAST,Thane,08:30
+CSMT_SLOW,Thane,09:00
+CSMT_FAST,Dadar,09:30
+CSMT_SLOW,Kurla,10:00
+CSMT_FAST,Thane,17:30
+CSMT_SLOW,Dadar,18:00

@@ -1,0 +1,36 @@
+from django.urls import path
+from .views import (
+    analytics_overview,
+    crowd_distribution_analytics,
+    crowd_stats,
+    peak_hours,
+    peak_prediction_hours,
+    prediction_history,
+    prediction_trends,
+    predict_crowd,
+    recent_activities,
+    stations_list,
+    timetable,
+    top_crowded_stations,
+    visitor_growth,
+    visitor_history,
+    weather_impact_analysis,
+)
+
+urlpatterns = [
+    path('api/predict/', predict_crowd),
+    path('api/crowd-stats/', crowd_stats),
+    path('api/peak-hours/', peak_hours),
+    path('api/stations/', stations_list),
+    path('api/timetable/', timetable),
+    path('api/analytics/overview/', analytics_overview),
+    path('api/analytics/crowd-distribution/', crowd_distribution_analytics),
+    path('api/analytics/top-stations/', top_crowded_stations),
+    path('api/analytics/trends/', prediction_trends),
+    path('api/analytics/visitor-growth/', visitor_growth),
+    path('api/analytics/weather-impact/', weather_impact_analysis),
+    path('api/analytics/peak-hours/', peak_prediction_hours),
+    path('api/analytics/recent-activities/', recent_activities),
+    path('api/analytics/prediction-history/', prediction_history),
+    path('api/analytics/visitor-history/', visitor_history),
+]
